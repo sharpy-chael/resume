@@ -18,6 +18,7 @@
             <a href="#home" class="active"><i class="fa-solid fa-house"></i> Home</a>
             <a href="#education"><i class="fa-solid fa-graduation-cap"></i> Education</a>
             <a href="#experience"><i class="fa-solid fa-briefcase"></i> Experience</a>
+            <a href="#gallery"><i class="fa-solid fa-images"></i> Gallery</a>
             <a href="#about"><i class="fa-solid fa-user"></i> About me</a>
         </nav>
     </header>
@@ -152,6 +153,79 @@
             </div>
         </section>
 
+        <section id="gallery" class="gallery">
+            <h2 class="section-title reveal"><i class="fa-solid fa-images"></i> Work Gallery</h2>
+            <div class="gallery-group reveal" data-caption="IT Intern - PUP Unisan Campus, Quezon">
+                <div class="group-head">
+                    <div class="group-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <div>
+                        <h3>IT Intern</h3>
+                        <p>Polytechnic University of the Philippines Unisan Campus, Quezon</p>
+                    </div>
+                </div>
+                <div class="gallery-grid">
+                    <figure class="gallery-item reveal" tabindex="0" role="button" aria-label="View photo 1 of 3, IT Intern">
+                        <img class="focus-mid" src="it-intern-1.jpg" alt="Checking the connections of a computer in the computer laboratory" loading="lazy">
+                        <span class="zoom"><i class="fa-solid fa-expand"></i></span>
+                    </figure>
+                    <figure class="gallery-item reveal" tabindex="0" role="button" aria-label="View photo 2 of 3, IT Intern">
+                        <img class="focus-mid" src="it-intern-2.jpg" alt="Cleaning and servicing a computer unit in the computer laboratory" loading="lazy">
+                        <span class="zoom"><i class="fa-solid fa-expand"></i></span>
+                    </figure>
+                    <figure class="gallery-item reveal" tabindex="0" role="button" aria-label="View photo 3 of 3, IT Intern">
+                        <img class="focus-mid" src="it-intern-3.jpg" alt="Handling cables while working on a computer set in the computer laboratory" loading="lazy">
+                        <span class="zoom"><i class="fa-solid fa-expand"></i></span>
+                    </figure>
+                </div>
+            </div>
+            <div class="gallery-group reveal" data-caption="Office Municipal Clerk - Municipal Office of Padre Burgos, Quezon">
+                <div class="group-head">
+                    <div class="group-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <div>
+                        <h3>Office Municipal Clerk</h3>
+                        <p>Municipal Office of Padre Burgos, Quezon</p>
+                    </div>
+                </div>
+                <div class="gallery-grid">
+                    <figure class="gallery-item reveal" tabindex="0" role="button" aria-label="View photo 1 of 3, Municipal Office">
+                        <img class="focus-mid" src="municipal-clerk-1.jpg" alt="Stacks of tax declaration documents on the desk at the Municipal Office of Padre Burgos" loading="lazy">
+                        <span class="zoom"><i class="fa-solid fa-expand"></i></span>
+                    </figure>
+                    <figure class="gallery-item reveal" tabindex="0" role="button" aria-label="View photo 2 of 3, Municipal Office">
+                        <img class="focus-mid" src="municipal-clerk-2.jpg" alt="Workspace at the Municipal Office of Padre Burgos with documents, a keyboard and a hand holding a paper" loading="lazy">
+                        <span class="zoom"><i class="fa-solid fa-expand"></i></span>
+                    </figure>
+                    <figure class="gallery-item reveal" tabindex="0" role="button" aria-label="View photo 3 of 3, Municipal Office">
+                        <img class="focus-mid" src="municipal-clerk-3.jpg" alt="Office workspace at the Municipal Office of Padre Burgos with a desktop monitor, laptop and stacks of papers" loading="lazy">
+                        <span class="zoom"><i class="fa-solid fa-expand"></i></span>
+                    </figure>
+                </div>
+            </div>
+            <div class="gallery-group reveal" data-caption="Office Clerk - QPSTEMPC, Lucena City">
+                <div class="group-head">
+                    <div class="group-icon"><i class="fa-solid fa-folder-open"></i></div>
+                    <div>
+                        <h3>Office Clerk</h3>
+                        <p>QPSTEMPC, Lucena City</p>
+                    </div>
+                </div>
+                <div class="gallery-grid">
+                    <figure class="gallery-item reveal" tabindex="0" role="button" aria-label="View photo 1 of 3, QPSTEMPC">
+                        <img class="focus-low" src="qpstempc-1.jpg" alt="Office team at QPSTEMPC seated at a long desk with their supervisor standing behind them" loading="lazy">
+                        <span class="zoom"><i class="fa-solid fa-expand"></i></span>
+                    </figure>
+                    <figure class="gallery-item reveal" tabindex="0" role="button" aria-label="View photo 2 of 3, QPSTEMPC">
+                        <img src="qpstempc-2.jpg" alt="Office team at QPSTEMPC working at tables with stacks of documents" loading="lazy">
+                        <span class="zoom"><i class="fa-solid fa-expand"></i></span>
+                    </figure>
+                    <figure class="gallery-item reveal" tabindex="0" role="button" aria-label="View photo 3 of 3, QPSTEMPC">
+                        <img src="qpstempc-3.jpg" alt="Collage of document filing work at QPSTEMPC: punching, cutting and stacking records" loading="lazy">
+                        <span class="zoom"><i class="fa-solid fa-expand"></i></span>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
         <section id="about" class="about">
             <h2 class="section-title reveal"><i class="fa-solid fa-user"></i> About me</h2>
             <div class="about-container">
@@ -183,6 +257,14 @@
     <footer>
         <p>&copy; My Resume 2026</p>
     </footer>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close photo"><i class="fa-solid fa-xmark"></i></button>
+        <figure>
+            <img id="lightboxImg" src="" alt="">
+            <figcaption id="lightboxCaption"></figcaption>
+        </figure>
+    </div>
 
     <button class="to-top" id="toTop" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 

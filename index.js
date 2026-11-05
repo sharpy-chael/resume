@@ -114,3 +114,43 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 } else {
     type();
 }
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxCaption = document.getElementById('lightboxCaption');
+const lightboxClose = document.getElementById('lightboxClose');
+
+function openLightbox(item) {
+    const img = item.querySelector('img');
+    lightboxImg.src = img.currentSrc || img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = item.closest('.gallery-group').dataset.caption;
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    lightboxClose.focus();
+}
+
+function closeLightbox() {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => openLightbox(item));
+    item.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openLightbox(item);
+        }
+    });
+});
+
+lightboxClose.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', event => {
+    if (event.target === lightbox) closeLightbox();
+});
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+});
